@@ -16,10 +16,19 @@ def determine_numberwang(number, chance):
         return False;
 
 if (__name__ == "__main__"):
-    for i in range(1,4):
+    for i in range(1,4): # Three rounds
         print("Round " + str(i) + ":")
-        for j in range(0,5):
+        for j in range(0,5): # 5 chances
             if (determine_numberwang(float(input("> ")), 1.0/(i*2))):
                 print("That's Numberwang!")
             else:
                 print("That's not Numberwang.")
+    # Wangernumb
+    print("\nLet's Rotate the Board! It's time for WangerNumb!\n")
+    for i in range(1,4): # Three rounds
+        print("Round " + str(i) + ":")
+        for j in range(0,5): # 5 chances
+            if (determine_numberwang(float(input("> ")), 1.0/(i*2))):
+                print("That's WangerNumb!")
+            else:
+                print("That's not WangerNumb.")
