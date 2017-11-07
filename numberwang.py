@@ -9,9 +9,18 @@ def determine_numberwang(number, chance):
 
 if (__name__ == "__main__"):
     points = 0;
+    numberwang_array = []
+
+    for i in range(random.randrange(10,20)):
+        # add between 10 and 20 values to the numberwang array
+        if (random.random() < 0.3):
+            numberwang_array += [float(random.randrange(-1020,5000)/100)]
+        else:
+            numberwang_array += [random.randrange(-102,500)]
 
     for i in range(1,4): # Three rounds
         print("Round " + str(i) + ":")
+        print(numberwang_array)
         for j in range(0,5): # 5 chances
             if (determine_numberwang(float(input("> ")), 1.0/(i*2))):
                 points += 1
